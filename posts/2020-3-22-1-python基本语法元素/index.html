@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.66.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1 Python基本语法元素 &middot; Hansome Tao&#39; blog</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://hansometao.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://hansometao.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://hansometao.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://hansometao.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://hansometao.github.io/"><h1>Hansome Tao&#39; blog</h1></a>
+      <p class="lead">
+       探索学习的发布平台 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://hansometao.github.io/">主页</a> </li>
+        <li><a href="https://github.com/hansometao/"> Github </a></li><li><a href="/about/"> 关于我 </a></li><li><a href="/categories/"> 分类 </a></li><li><a href="/posts/"> 归档 </a></li><li><a href="/tags/"> 标签 </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>1 Python基本语法元素</h1>
+  <time datetime=2020-03-22T14:28:40&#43;0800 class="post-date">2020-03-22</time>
+  <h1 id="11-程序设计基本方法">1.1 程序设计基本方法</h1>
+<h2 id="计算机与程序设计">计算机与程序设计</h2>
+<h3 id="计算机的概念">计算机的概念</h3>
+<p>计算机是根据指令操作数据的设备</p>
+<p>功能性：对数据的操作，表现为数据计算、输入输出处理和结果存储等</p>
+<p>可编程性：根据一系列指令自动地、可预测地、准确地完成操作者的意图</p>
+<h3 id="计算机的发展">计算机的发展</h3>
+<p>计算机的发展参照摩尔定律，表现为指数方式</p>
+<h3 id="程序设计">程序设计</h3>
+<p>程序设计是计算机可编程性的体现</p>
+<p>程序设计，亦称编程，深度应用计算机的主要手段</p>
+<p>程序设计已经成为当今社会需求量最大的职业技能之一</p>
+<p>很多岗位都将被计算机程序接管，程序设计将是生存技能</p>
+<h3 id="程序设计语言">程序设计语言</h3>
+<p>程序设计语言是一种用于交互（交流）的人造语言</p>
+<p>程序设计语言，亦称编程语言，程序设计的具体实现方式</p>
+<p>编程语言相比自然语言更简单、更严谨、更精确</p>
+<p>编程语言主要用于人类和计算机之间的交互</p>
+<p>编程语言种类很多，但生命力强劲的却不多</p>
+<p>编程语言有超过600种，绝大部分都不再被使用</p>
+<p>C语言诞生于1972年，它是第一个被广泛使用的编程语言</p>
+<p>Python语言诞生于1990年，它是最流行最好用的编程语言</p>
+<h2 id="编译和解释">编译和解释</h2>
+<h3 id="编程语言的执行方式">编程语言的执行方式</h3>
+<p>计算机执行源程序的两种方式：编译和解释</p>
+<p>源代码：采用某种编程语言编写的计算机程序，人类可读。</p>
+<p>例如：result = 2 + 3</p>
+<p>目标代码：计算机可直接执行，人类不可读（专家除外）</p>
+<h3 id="编译">编译</h3>
+<p>将源代码一次性转换成目标代码的过程</p>
+<p>执行编译过程的程序叫做编译器</p>
+<h3 id="解释">解释</h3>
+<p>将源代码逐条转换成目标代码同时逐条运行的过程</p>
+<p>执行解释过程的程序叫做解释器</p>
+<h3 id="编译与解释">编译与解释</h3>
+<p>编译：一次性翻译，之后不再需要源代码（类似英文翻译）</p>
+<p>解释：每次程序运行时随翻译随执行（类似实时的同声传译）</p>
+<h3 id="静态语言和脚本语言">静态语言和脚本语言</h3>
+<p>根据执行方式不同，编程语言分为两类</p>
+<p>（1）静态语言：使用编译执行的编程语言，编译器一次性生成目标代码，优化更充分，程序运行速度更快，如C/C++语言</p>
+<p>（2）脚本语言：使用解释执行的编程语言，执行程序时需要源代码，维护更灵活、可跨平台运行，如Python语言、JavaScript语言</p>
+<h2 id="程序的基本编写方法">程序的基本编写方法</h2>
+<h3 id="ipo">IPO</h3>
+<p>程序的基本编写方法</p>
+<p>I：Input输入，程序的输入</p>
+<p>P：Process处理，程序的主要逻辑</p>
+<p>O：Output输出，程序的输出</p>
+<h3 id="输入">输入</h3>
+<p>程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部参数输入等</p>
+<p>输入是一个程序的开始</p>
+<h3 id="输出">输出</h3>
+<p>程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等</p>
+<p>输出是程序展示运算结果的方式</p>
+<h3 id="处理">处理</h3>
+<p>处理是程序对输入数据进行计算产生输出结果的过程</p>
+<p>处理方法统称为算法，它是程序最核心的部分</p>
+<p>算法是一个程序的灵魂</p>
+<h3 id="问题的计算部分">问题的计算部分</h3>
+<p>一个待解决问题中，可以用程序辅助完成的部分</p>
+<p>计算机只能解决计算问题，即问题的计算部分</p>
+<p>一个问题可能有多种角度理解，产生不同的计算部分</p>
+<p>问题的计算部分一般都有输入、处理和输出过程</p>
+<h3 id="编程解决问题的步骤">编程解决问题的步骤</h3>
+<p>（1）分析问题：分析问题的计算部分，<!-- raw HTML omitted -->想清楚<!-- raw HTML omitted --></p>
+<p>（2）划分边界：划分问题的功能边界，<!-- raw HTML omitted -->规划IPO<!-- raw HTML omitted --></p>
+<p>（3）设计算法：设计问题的求解算法，<!-- raw HTML omitted -->关注算法<!-- raw HTML omitted --></p>
+<p>（4）编写程序：编写问题的计算程序，<!-- raw HTML omitted -->编程序<!-- raw HTML omitted --></p>
+<p>（5）调试测试：调试程序使正确运行，<!-- raw HTML omitted -->运行调试<!-- raw HTML omitted --></p>
+<p>（6）升级维护：适应问题的升级维护，<!-- raw HTML omitted -->更新完善<!-- raw HTML omitted --></p>
+<h3 id="求解计算问题的精简步骤3个精简步骤">求解计算问题的精简步骤（3个精简步骤）</h3>
+<p>（1）确定IPO：明确计算部分及功能边界</p>
+<p>（2）编写程序：将计算求解的设计变成现实</p>
+<p>（3）调试程序：确保程序按照正确逻辑能够正确运行</p>
+<h2 id="计算机编程">计算机编程</h2>
+<h3 id="编程能够训练思维">编程能够训练思维</h3>
+<p>编程体现了一种抽象交互关系、自动化执行的思维模式</p>
+<p>计算思维：区别逻辑思维和实证思维的第三种思维模式</p>
+<p>能够促进人类思考，增进观察力和深化对交互关系的理解</p>
+<h3 id="编程能够增进认识">编程能够增进认识</h3>
+<p>编程不单纯是求解计算问题</p>
+<p>不仅要思考解决方法，还要思考用户体验、执行效率等</p>
+<p>能够帮助程序员加深用户行为以及社会和文化认识</p>
+<h3 id="编程能够带来乐趣">编程能够带来乐趣</h3>
+<p>编程能够提供展示自身思想和能力的舞台</p>
+<p>让世界增加新的颜色、让自己变得更酷，提升心理满足感</p>
+<p>在信息空间里思考创新、将创新变为现实</p>
+<h3 id="编程能够提高效率">编程能够提高效率</h3>
+<p>能够更好地利用计算机解决问题</p>
+<p>显著提高工作、生活和学习效率</p>
+<p>为个人理想实现提供一种借助计算机的高效手段</p>
+<h3 id="编程带来就业机会">编程带来就业机会</h3>
+<p>程序员是信息时代最重要的工作岗位之一</p>
+<p>国内外对程序员岗位的缺口都在百万以上规模</p>
+<p>计算机已经渗透于各个行业，就业前景非常广阔</p>
+<h3 id="学习编程的方法">学习编程的方法</h3>
+<p>首先，掌握编程语言的语法，熟悉基本概念和逻辑</p>
+<p>其次，结合计算问题思考程序结构，会使用编程套路</p>
+<p>最后，参照案例多联系多实践，学会举一反三</p>
+<h1 id="12-python开发环境配置">1.2 Python开发环境配置</h1>
+<h2 id="python语言概述">Python语言概述</h2>
+<p>Python语言拥有者是Python Software Foundation（PSF）</p>
+<p>PSF是非盈利组织，致力于保护Python语言开放、开源和发展</p>
+<h3 id="python语言的诞生">Python语言的诞生</h3>
+<p>Python语言创立者 Guido van Rossum</p>
+<p>2002年，Python 2.x</p>
+<p>2008年，Python 3.x</p>
+<p>Python语言是一个有开放、开源精神的编程语言</p>
+<h2 id="python基本开发环境idle">Python基本开发环境IDLE</h2>
+<p>Python官方提供，适用于小规模程序开发</p>
+<p>Python官方环境：Python解释器 + IDLE开发环境</p>
+<p>轻量级：只有几十MB大小，使用灵活</p>
+<p>功能丰富：编辑器 + 交互环境 + 标准库 + 库安装工具</p>
+<p>下载地址：www.python.org/downloads</p>
+<h2 id="python程序编写与运行">Python程序编写与运行</h2>
+<p>交互式：对每个输入语句即时运行结果，适合语法练习</p>
+<p>文件式：批量执行一组语句并运行结果，编程的主要方式</p>
+<h2 id="python高级开发环境vscode">Python高级开发环境VSCode</h2>
+<h1 id="13-实例1温度转换">1.3 实例1：温度转换</h1>
+<h2 id="温度转换问题分析">“温度转换”问题分析</h2>
+<p>温度刻画的两种不同体系</p>
+<p>摄氏度：中国等世界大多数国家使用</p>
+<p>以1标准大气压下水的结冰点为0度，沸点为100度，将温度进行等分刻画</p>
+<p>华氏度：美国、英国等国家使用</p>
+<p>以1标准大气压下水的结冰点为32度，沸点为212度，将温度进行等分刻画</p>
+<h2 id="需求分析">需求分析</h2>
+<p>两种温度体系的转换</p>
+<p>摄氏度转换为华氏度</p>
+<p>华氏度转化为摄氏度</p>
+<h2 id="问题分析">问题分析</h2>
+<p>该问题中计算部分的理解和确定</p>
+<p>理解1：直接将温度值进行转换</p>
+<p>理解2：将温度信息发布的声音或图像形式进行理解和转换</p>
+<p>理解3：监控温度信息发布渠道，实时获取并转换温度值</p>
+<h2 id="划分边界">划分边界</h2>
+<p>输入：带华氏度或摄氏度标志的温度值</p>
+<p>处理：根据温度标志选择适当的温度转换算法</p>
+<p>输出：带摄氏度或华氏度标志的温度值</p>
+<p>输入输出格式设计</p>
+<p>标志放在温度最后，F表示华氏度，C表示摄氏度</p>
+<h2 id="设计算法">设计算法</h2>
+<p>根据华氏温度和摄氏温度定义，利用转换公式</p>
+<p>C = （F-32）/1.8</p>
+<p>F = C * 1.8 + 32</p>
+<h2 id="代码编写">代码编写</h2>
+<pre><code>
+#TempConvert.py
+
+TempStr = input(&quot;请输入带有符号的温度值：&quot;)
+
+if TempStr[-1] in ['F','f']:
+
+    C = (eval(TempStr[0:-1]) - 32)/1.8
+
+    print(&quot;转换后的温度是{:.2f}C&quot;.format(C))
+
+elif TempStr[-1] in ['C','c']:
+
+    F = 1.8 * eval(TempStr[0:-1]) + 32
+
+    print(&quot;转换后的温度是{:.2f}F&quot;.format(F))
+
+else:
+
+    print(&quot;输入格式错误&quot;)
+
+</code></pre><h2 id="举一反三">举一反三</h2>
+<p>货币转换、长度转换、重量转换、面积转换等</p>
+<h1 id="14-python程序语法元素分析">1.4 Python程序语法元素分析</h1>
+<h2 id="程序的格式框架">程序的格式框架</h2>
+<pre><code>
+#TempConvert.py
+
+TempStr = input(&quot;请输入带有符号的温度值：&quot;)
+
+if TempStr[-1] in ['F','f']:
+
+    C = (eval(TempStr[0:-1]) - 32)/1.8
+
+    print(&quot;转换后的温度是{:.2f}C&quot;.format(C))
+
+elif TempStr[-1] in ['C','c']:
+
+    F = 1.8 * eval(TempStr[0:-1]) + 32
+
+    print(&quot;转换后的温度是{:.2f}F&quot;.format(F))
+
+else:
+
+    print(&quot;输入格式错误&quot;)
+
+</code></pre><p>代码高亮：编程的色彩辅助体系，不是语法要求</p>
+<h2 id="缩进">缩进</h2>
+<p>缩进：一行代码开始前的空白区域，表达程序的格式框架</p>
+<ul>
+<li>
+<p>严格明确：缩进是语法的一部分 ，缩进不正确程序运行错误</p>
+</li>
+<li>
+<p>所属关系：表达代码间包含和层次关系的唯一手段</p>
+</li>
+<li>
+<p>长度一致：程序内一致即可，一般用4个空格或1个TAB</p>
+</li>
+</ul>
+<h2 id="注释">注释</h2>
+<p>注释：用于提高代码可读性的辅助性文字，不被执行</p>
+<ul>
+<li>
+<p>单行注释：以#开头，其后内容为注释</p>
+<p># 这里是单行注释</p>
+</li>
+<li>
+<p>多行注释：以'&lsquo;&lsquo;开头和结尾</p>
+<p>'&rsquo;&rsquo; 这是多行注释第一行</p>
+<p>这是多行注释第二行 '&rsquo;&rsquo;</p>
+</li>
+</ul>
+<h2 id="命名与保留字">命名与保留字</h2>
+<h3 id="变量">变量</h3>
+<p>变量：程序中用于保存和表示数据的占位符号</p>
+<ul>
+<li>
+<p>变量采用标识符（名字）来表示，关联标识符的过程叫命名</p>
+<p>TempStr是变量名字</p>
+</li>
+<li>
+<p>可以使用等号（=）向变量赋值或修改值，“=”被称为赋值符号</p>
+<p>TempStr = “82F” #向变量TempStr赋值“82F”</p>
+</li>
+</ul>
+<h3 id="命名关联标识符的过程">命名：关联标识符的过程</h3>
+<ul>
+<li>
+<p>命名规则：大小写字母、数字、下划线和中文等字符及组合</p>
+<p>如TempStr，Python_Great，Python课</p>
+</li>
+<li>
+<p>注意事项：大小写敏感、首字符不能是数字、不能和保留字相同</p>
+<p>Python和python是不同变量，123Python是不合法变量</p>
+</li>
+</ul>
+<h3 id="保留字">保留字</h3>
+<p>保留字：被编程语言内部定义并保留使用的标识符</p>
+<ul>
+<li>
+<p>Python语言有35个保留字（也叫关键字）</p>
+<p>if，elif，else，in等</p>
+</li>
+<li>
+<p>保留字是编程语言的基本单词，大小写敏感</p>
+<p>if是保留字，If是变量</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<pre><code>&lt;tr&gt;
+
+    &lt;td colspan = &quot;5&quot; align = &quot;center&quot; &gt;&lt;b&gt;Python保留字&lt;/b&gt;&lt;/td&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;and&lt;/td&gt;
+
+    &lt;td&gt;elif&lt;/td&gt;
+
+    &lt;td&gt;import&lt;/td&gt;
+
+    &lt;td&gt;raise&lt;/td&gt;
+
+    &lt;td&gt;global&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;as&lt;/td&gt;
+
+    &lt;td&gt;else&lt;/td&gt;
+
+    &lt;td&gt;in&lt;/td&gt;
+
+    &lt;td&gt;return&lt;/td&gt;
+
+    &lt;td&gt;nonlocal&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;assert&lt;/td&gt;
+
+    &lt;td&gt;except&lt;/td&gt;
+
+    &lt;td&gt;is&lt;/td&gt;
+
+    &lt;td&gt;try&lt;/td&gt;
+
+    &lt;td&gt;True&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;break&lt;/td&gt;
+
+    &lt;td&gt;finally&lt;/td&gt;
+
+    &lt;td&gt;lambda&lt;/td&gt;
+
+    &lt;td&gt;while&lt;/td&gt;
+
+    &lt;td&gt;False&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;class&lt;/td&gt;
+
+    &lt;td&gt;for&lt;/td&gt;
+
+    &lt;td&gt;not&lt;/td&gt;
+
+    &lt;td&gt;with&lt;/td&gt;
+
+    &lt;td&gt;None&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;continue&lt;/td&gt;
+
+    &lt;td&gt;from&lt;/td&gt;
+
+    &lt;td&gt;or&lt;/td&gt;
+
+    &lt;td&gt;yield&lt;/td&gt;
+
+    &lt;td&gt;async&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+    &lt;td&gt;def&lt;/td&gt;
+
+    &lt;td&gt;if&lt;/td&gt;
+
+    &lt;td&gt;pass&lt;/td&gt;
+
+    &lt;td&gt;del&lt;/td&gt;
+
+    &lt;td&gt;await&lt;/td&gt;
+
+&lt;/tr&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<h2 id="数据类型">数据类型</h2>
+<h3 id="数据类型供计算机程序理解的数据形式">数据类型：供计算机程序理解的数据形式</h3>
+<ul>
+<li>
+<p>程序设计语言不允许存在语法歧义，需要定义数据的形式</p>
+<p>需要给10011101二进制数据关联一种计算机可以理解的形式</p>
+</li>
+<li>
+<p>程序设计语言通过一定方式向计算机表达数据的形式</p>
+<p>“123”表示文本字符串123 ， 123则表示数字123</p>
+</li>
+<li>
+<p>整数类型：10011101</p>
+</li>
+<li>
+<p>字符串类型：“10,011,011”</p>
+</li>
+<li>
+<p>列表类型： [10, 011, 101]</p>
+</li>
+</ul>
+<h3 id="字符串由0个或多个字符组成的有序字符序列">字符串：由0个或多个字符组成的有序字符序列</h3>
+<ul>
+<li>
+<p>字符串由一堆单引号或一堆双引号表示</p>
+<p>“请输入带有符号的温度值：&ldquo;或者&rsquo;C&rsquo;</p>
+</li>
+<li>
+<p>字符串是字符的有序序列，可以对其中的字符进行索引</p>
+<p>“请”是“请输入带有符号的温度值：”的第0个字符</p>
+</li>
+</ul>
+<h3 id="字符串的序号">字符串的序号</h3>
+<p>正向递增序号和反向递减序号</p>
+<h3 id="字符串的使用">字符串的使用</h3>
+<p>使用[ ] 获取字符串中一个或多个字符</p>
+<ul>
+<li>索引：返回字符串中单个字符
+&ldquo;请输入带有符号的温度值：&quot;[0] 或者 TempStr[-1]</li>
+<li>切片：返回字符串中一段字符子串
+&ldquo;请输入带有符号的温度值：&quot;[1:3] 返回值为“输入”或者 TempStr[0:-1]</li>
+</ul>
+<h3 id="数字类型">数字类型</h3>
+<ul>
+<li>整数：数学中的整数</li>
+<li>浮点数：数学中的实数，带有小数部分</li>
+</ul>
+<h3 id="列表类型由0个或多个数据组成的有序序列">列表类型：由0个或多个数据组成的有序序列</h3>
+<ul>
+<li>列表使用<input disabled="" type="checkbox">表示，采用逗号（，）分割各元素
+[&lsquo;F&rsquo;, &lsquo;f&rsquo;]表示两个元素&rsquo;F&rsquo; 和 &lsquo;f&rsquo;</li>
+<li>使用保留字in判断一个元素是否在列表中
+TempStr[-1] in [&lsquo;C&rsquo;, &lsquo;c&rsquo;]     判断前者是否与列表中某个元素相同</li>
+</ul>
+<h2 id="语句与函数">语句与函数</h2>
+<h3 id="赋值语句由赋值符号构成的一行代码">赋值语句：由赋值符号构成的一行代码</h3>
+<ul>
+<li>
+<p>赋值语句用来给变量赋予新的数据值</p>
+<p>C = (eval(TempStr[0:-1]) - 32)/1.8  #右侧运算结果赋给变量C</p>
+</li>
+<li>
+<p>赋值语句右侧的数据类型同时作用于变量</p>
+<p>TempStr=input(&quot;&quot;)    #input()返回一个字符串，TempStrs也是字符串类型</p>
+</li>
+</ul>
+<h3 id="分支语句由判断条件决定程序运行方向的语句">分支语句：由判断条件决定程序运行方向的语句</h3>
+<ul>
+<li>
+<p>使用保留字if，elif， else构成条件判断的分支结构</p>
+</li>
+<li>
+<p>每个保留字所在行最后存在一个冒号（:），语法的一部分</p>
+<p>冒号及后续缩进用来表示后续语句与条件的所属关系</p>
+</li>
+</ul>
+<h3 id="函数根据输入参数产生不同输出的功能过程">函数：根据输入参数产生不同输出的功能过程</h3>
+<ul>
+<li>
+<p>类似数学中的函数，y = f(x)</p>
+<p>print(&ldquo;输入格式错误&rdquo;)    #打印输出”输入格式错误“</p>
+</li>
+<li>
+<p>函数采用&lt;函数名&gt;(&lt;参数&gt;)方式使用</p>
+<p>eval(TempStr[0:-1])    #TempStr[0:-1]是参数</p>
+</li>
+</ul>
+<h2 id="python程序的输入输出">Python程序的输入输出</h2>
+<h3 id="输入函数input">输入函数input()</h3>
+<p>从控制台获得用户输入的函数</p>
+<ul>
+<li>
+<p>input()函数的使用格式：&lt;变量&gt; = input(&lt;提示信息字符串&gt;)</p>
+</li>
+<li>
+<p>用户输入的信息以字符串类型保存在变量中</p>
+<p>TempStr = input(&ldquo;请输入&rdquo;)     #变量TempStr保存用户输入的信息</p>
+</li>
+</ul>
+<h3 id="输出函数print">输出函数print()</h3>
+<p>以字符形式向控制台输出结果的函数</p>
+<ul>
+<li>
+<p>print()函数的基本使用格式：print(&lt;你输出字符串或字符串变量&gt;)</p>
+</li>
+<li>
+<p>字符串类型的一对引号仅在程序内部使用，输出结果无引号</p>
+<p>print(&ldquo;输入格式错误&rdquo;)     #向控制台输出 输入格式错误</p>
+</li>
+<li>
+<p>print()函数的格式化：</p>
+<p>如果C的值是123.456789，则输出结果为：转换后的温度是123.45C</p>
+</li>
+</ul>
+<p>###评估函数eval()
+去掉参数最外侧引号并执行余下语句的函数</p>
+<ul>
+<li>eval()函数的基本使用格式：eval(&lt;字符串或字符串变量&gt;)
+<blockquote>
+<blockquote>
+<blockquote>
+<p>eval(&ldquo;1&rdquo;)
+结果：1
+eval(&ldquo;1+2&rdquo;)
+结果：3
+eval('&ldquo;1+2&rdquo;')
+结果：&lsquo;1+2&rsquo;
+eval(&lsquo;print(&ldquo;Hello&rdquo;)')
+结果：Hello</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h2 id="温度转换代码分析">“温度转换”代码分析</h2>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
